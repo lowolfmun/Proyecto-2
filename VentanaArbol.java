@@ -15,7 +15,7 @@ public class VentanaArbol extends JFrame {
         arbol = new ABB();
 
         // Configuración básica de la ventana
-        setTitle("Proyecto 2: Pila y Árbol Binario");
+        setTitle("Árbol Binario");
         setSize(500, 400);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
@@ -42,7 +42,7 @@ public class VentanaArbol extends JFrame {
         campoSalida = new JTextArea();
         campoSalida.setEditable(false); //Hace que no se pueda editar el contenido
         campoSalida.setFont(new Font("Monospaced", Font.PLAIN, 14)); //font y tamaño
-        add(new JScrollPane(campoSalida), BorderLayout.CENTER); //añade área con scroll para árboles mut largos
+        add(new JScrollPane(campoSalida), BorderLayout.CENTER); //añade área con scroll para árboles muy largos
 
         // Acción para insertar dígito en el árbol
         botonInsertar.addActionListener(new ActionListener() {
@@ -114,13 +114,6 @@ public class VentanaArbol extends JFrame {
         campoSalida.setText(arbol.dibujarArbol()); 
     }
 
-    // Método principal para ejecutar la aplicación
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            VentanaArbol ventana = new VentanaArbol(); //Crea instancia de la ventana
-            ventana.setVisible(true); //HAce visible la ventana
-        });
-    }
 }
 
 
